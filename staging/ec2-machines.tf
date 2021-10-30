@@ -69,7 +69,7 @@ resource "aws_instance" "staging-landing" {
 
 HEREDOC
 }
-resource "aws_instance" "letsbuki" {
+resource "aws_instance" "webservice-FE" {
   ami                         = var.AmiLinux[var.region]
   instance_type               = "t2.micro"
   associate_public_ip_address = "true"
@@ -77,10 +77,10 @@ resource "aws_instance" "letsbuki" {
   vpc_security_group_ids      = [aws_security_group.FrontEnd.id]
   key_name                    = var.key_name
   tags = {
-    Name = "letsbukiFE"
+    Name = "ApplicationHeartbreak"
     env = "dev"
     tier = "frontend"
-    proj = "letsbuki"
+    proj = "overbudget"
   }
   user_data = <<HEREDOC
   #!/bin/bash

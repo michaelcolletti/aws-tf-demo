@@ -19,7 +19,7 @@ resource "aws_s3_bucket" "templates" {
     Environment = "Dev"
   }
   versioning {
-    enabled = true
+    enabled = false
   }
 }
 resource "aws_s3_bucket" "logs" {
